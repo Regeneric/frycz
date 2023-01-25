@@ -1,0 +1,33 @@
+/* Footer */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-bottom: 2em;
+} footer h2 {
+    font-family: var(--ff-logo);
+    font-size: clamp(2rem, 4vw, 3rem);
+} footer .address {line-height: 1; text-align: center;}
+
+footer .mini-menu ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: space-around; */
+
+    margin: 0;
+    padding: 0;
+}
+footer .mini-menu ul li {
+    list-style: none;
+    margin: 0;
+} footer .mini-menu ul li a {
+    text-decoration: none;
+    color: var(--clr-accent);
+    transition: 150ms ease-in-out;
+} 
+footer .mini-menu ul li a:focus,
+footer .mini-menu ul li a:hover {
+    color: var(--clr-accent-modest);
+}

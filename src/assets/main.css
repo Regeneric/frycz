@@ -1,0 +1,108 @@
+/* Main Content */
+.main-grid {
+    /* margin: 1em; */
+    margin-top: 90px;
+}
+
+
+/* Baner */
+.main-baner {
+    padding: 1em;
+
+    display: grid;
+    place-items: center;
+
+    background: rgba(0, 0, 0, 0.2) url('../../public/img/baner.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-blend-mode: overlay;
+}
+
+.main-banert h2, h3 {line-height: 1;} 
+.main-baner h2 {
+    font-size: clamp(1rem, 10vw, 3rem); 
+    margin: 0;
+    text-align: left;
+}
+.main-baner h3 {
+    font-size: clamp(1rem, 40vw, 2rem);
+    margin: 0;
+    margin-top: 1em;
+}
+
+.main-baner p {
+    text-align: justify;
+    margin-bottom: 2rem;
+    max-width: 65ch;
+}
+
+
+/* Cards section */
+.card {
+    padding: 0.25em;
+    
+    text-align: center;
+    background-color: var(--clr-accent);
+    
+    position: relative;
+    cursor: pointer;
+    
+    transition: 150ms ease-in-out;
+}
+.card:focus,
+.card:hover {
+    background-color: var(--clr-accent-modest);
+} 
+.card:hover > a {color: black;}
+.card:hover > a::before {transform: scale(1, 1);}
+
+.cards {
+    margin: 2em 1em;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* justify-content: space-around; */
+    flex-wrap: wrap;
+    gap: 1em;
+} .cards > * {
+    flex-basis: calc(1200px - 100%);
+    flex-grow: 0.275;
+} 
+
+.card a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--clr-text);
+
+    font-size: clamp(1rem, 20vw, 2rem);
+    position: relative;
+} .card a::before {
+    content: '';
+    background-color: black;
+
+    display: block;
+    position: absolute;
+    bottom: -0.125rem;
+    left: 0;
+    right: 0;
+    height: 3px;
+
+    transform: scale(0, 1);
+    transform-origin: left;
+    transition: transform ease-in-out 150ms;
+} 
+
+.card img {
+   object-fit: cover;
+   height: 380px;
+   /* width: auto; */
+} .card img:hover {
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 1);
+}
+
+.card-desc p {
+    text-align: justify;
+}
